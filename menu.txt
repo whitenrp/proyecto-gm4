@@ -1,0 +1,41 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+
+	struct	cliente{
+	string DNI;
+	string nombre;
+	string apellidos;
+	string fechanacimiento;
+	string correoelec;
+	int problemasfisicos;	//este int=0 cuando el cliente no posee problemas físicos, cuando =1 posée y se mostrará las rutas especiales
+	};
+	
+	struct parquenatural{ //rutas
+	string ubicación;
+	string municipio;
+	string provincias;
+	int nhectareas;
+	date horarios;
+	string reservas;
+	};
+
+	struct monitor{
+	string nombre;
+	string apellidos;
+	string DNI;
+	string fechanacimiento;
+	string dirección;
+	string correoelectronico;
+	};
+
+
+
+int main(){
+
+	cout<<"\n Ha accedido al sistema <<endl;
+
+
+
+
+}//fin main
