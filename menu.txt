@@ -38,6 +38,23 @@ FILE *archivo = fopen("Rutas.txt","r");
 
 }
 
+void realizarreserva(){
+	int sn=0; //sirve para que el cliente elija si ver o no de nuevo las rutas
+	int truta=0; //el n de la ruta
+	int horarioderuta=0;
+	cout<<"¿Desea volver a ver las rutas? 1/sí 2/no"<<endl;
+	cin>>sn;
+	if(sn==1){mostrarrutas();}
+	cout<<"Que tipo de ruta desea reservar"<<endl;
+	cin>>truta;
+	cout<<"Seleccione un horario disponible."<<endl;
+	mostrarhorarios();//hay que implementarla
+	cin>>horarioderuta;
+	cout<<"¿Desea solicitar un monitor? 1/si 2/no"<<endl;
+	cin>>sn;
+	if(sn==1){reservarmonitor();} //llama a la funcion muestra monitores y eliges la reserva.
+	
+}
 
 
 
