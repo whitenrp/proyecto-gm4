@@ -27,6 +27,19 @@
 	string correoelectronicom;
 	};
 
+void mostrarrutas(){
+FILE *archivo = fopen("Rutas.txt","r");
+	int c;
+	while((c=fgetc(archivo))!= EOF)
+	{
+		putchar(c);
+	}
+	printf("\n");
+
+}
+
+
+
 
 int main(){
 
