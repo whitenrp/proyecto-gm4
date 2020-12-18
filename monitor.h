@@ -28,4 +28,17 @@ inline void setCorreoelectronico(string correoelectronico){correoelectronico=cor
 inline string getCorreoelectronico(){return correoelectronico_;}
 inline void setDireccion(string direccion){direccion=direccion_;}
 inline string getDireccion(){return direccion_;}
+  
+inline void setDar_datos_monitor(string nombre, string apellidos, string DNI, int edad, string correoelectronico, string direccion){nombre=nombre_,apellidos=apellidos_,DNI=DNI_,edad=edad_,correoelectronico=correoelectronico_,direccion=direccion_;}
+inline string getDar_datos_monitor(){return nombre_, apellidos_, DNI_, edad_, correoelectronico_, direccion_;}
+
+bool confirmar_monitor();
+void setBuscar_rutas_disponibles();
+string getDar_rutas();
+void setBuscar_fechayhoradisp();
+string getDar_fechayhoradisp();
+void setBuscar_rutas_especiales();
+void setReservar_fechayhora();
+
+
 }
