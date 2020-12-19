@@ -1,4 +1,4 @@
-Sendero de la Alpujarra (Almería)
-Los puentes colgantes de los Cahorros (Granada)
-Río Borosa, Cazorla (Jaén)
-Sendero del río Bailón (Córdoba)
+1: Sendero de la Alpujarra (Almería)
+2: Los puentes colgantes de los Cahorros (Granada)
+3: Río Borosa, Cazorla (Jaén)
+4: Sendero del río Bailón (Córdoba)
