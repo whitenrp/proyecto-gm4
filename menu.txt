@@ -25,6 +25,7 @@
 	string fechanacimiento;
 	string dirección;
 	string correoelectronicom;
+	
 	};
 
 
