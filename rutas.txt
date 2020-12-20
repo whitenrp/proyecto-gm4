@@ -1,7 +1,7 @@
-1: Sendero de la Alpujarra (Almería)
-2: Los puentes colgantes de los Cahorros (Granada)
-3: Río Borosa, Cazorla (Jaén)
-4: Sendero del río Bailón (Córdoba)
-5:  Sendero ruta del agua de guillena (Jaén)
-6: Camino del Rey (Málaga)
-7: Sendero circular de Lanjarón (Granada)
+1: Sendero de la Alpujarra (Almería) //facil, medio, dificil
+2: Los puentes colgantes de los Cahorros (Granada) //facil, medio, dificil
+3: Río Borosa, Cazorla (Jaén) //facil, medio, dificil
+4: Sendero del río Bailón (Córdoba) //facil, medio, dificil
+5: Sendero ruta del agua de guillena (Jaén) //facil, medio, dificil
+6: Camino del Rey (Málaga) //facil, medio, dificil
+7: Sendero circular de Lanjarón (Granada) //facil, medio, dificil
