@@ -1,4 +1,9 @@
 #include "monitor.h"
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+using namespace std;
+
 
 Monitor(string DNI, string nombre, string apellidos, int edad, string correoelectronico, string direccion)
 {
@@ -13,7 +18,7 @@ Monitor(string DNI, string nombre, string apellidos, int edad, string correoelec
 bool Monitor::confirmar_monitor(){
 	string respuesta;
 	cout<<"¿Puedes asistir?";
-	getline(cin,respuesta);
+	cin>>respuesta;
 	if (respuesta=="si"){
 		return true;
 	}
@@ -21,17 +26,34 @@ bool Monitor::confirmar_monitor(){
 		return false;
 }
 
-void Monitor::setBuscar_rutas_disponibles(){
-}
 
 string Monitor::getDar_rutas(){
+	ifstream archivo;
+	archivo.open("rutas.txt");
+	string texto;
+	
+	if (archivo.fail()){
+		cout<<"Carga de fichero fallida";
+		exit(1);
+	}
+	
+	while(!archivo.eof()){
+		getline(archivo,texto);
+		cout<<texto<<endl;
+	}
+	archivo.close();
 }
-void Monitor::setBuscar_fechayhoradisp(){
-}
+	
+	
 string Monitor::getDar_fechayhoradisp(){
 }
-void Monitor::setBuscar_rutas_especiales(){
-}
+
 void Monitor::setReservar_fechayhora(){
+}
+
+string Monitor::getDar_fechayhoraespecial(){
+}
+
+void Monitor::setReservar_fechayhoraespecial(){
 }
 
