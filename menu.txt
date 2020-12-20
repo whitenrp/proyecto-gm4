@@ -28,7 +28,7 @@ using namespace std;
 
 int main(){
 
-	Cliente cliente1;
+	struct Cliente cliente1;
 	int opcion_menu;
 	cout<<endl;
     	cout<<"\t ____________________________________________________________"<<endl;   
