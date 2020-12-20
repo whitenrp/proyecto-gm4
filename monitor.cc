@@ -4,7 +4,9 @@
 #include <stdlib.h>
 #include <string>
 using namespace std;
-
+ifstream leer;
+istream archivo;
+ofstream temp;
 
 
 Monitor(string DNI, string nombre, string apellidos, int edad, string correoelectronico, string direccion)
