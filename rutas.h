@@ -51,9 +51,7 @@ public:
 
 		std::string temp;
 
-		while(file != EOF){
-
-			getline(file, temp, '\n');
+		while(getline(file, temp, '\n')){
 
 			std::cout << temp << std::endl;
 
@@ -75,9 +73,7 @@ public:
 
 		std::string temp;
 
-		while(file != EOF){
-
-			getline(file, temp, '\n');
+		while(getline(file, temp, '\n')){
 
 			std::cout << temp << std::endl;
 
@@ -100,9 +96,7 @@ public:
 
 		std::string temp;
 
-		while(file != EOF){
-
-			getline(file, temp, '\n');
+		while(getline(file, temp, '\n')){
 
 			std::cout << temp << std::endl;
 
@@ -125,11 +119,7 @@ public:
 		}
 		else{
 
-			while(file != EOF){
-
-				file >> info;
-
-			}
+			file << info;
 
 		}
 
