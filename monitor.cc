@@ -82,9 +82,9 @@ void Monitor::setReservar_fechayhora(){
 		leer>>cod;	
 		if(cod==codaux){
 			encontrado=true;
-			cout<<"dia: "<<dia;
-			cout<<"hora: "<<hora;
-			cout<<"codigo: "<<cod;
+			cout<<" dia: "<<dia;
+			cout<<" hora: "<<hora;
+			cout<<" codigo: "<<cod;
 			cout<<endl;
 			cout<<"reservado"<<endl;			
 		}
@@ -106,8 +106,61 @@ void Monitor::setReservar_fechayhora(){
 
 
 string Monitor::getDar_fechayhoraespecial(){
+	ifstream leer;
+	string texto;
+	leer.open("fechasespeciales.txt");
+	if (leer.fail()){
+		cout<<"Error al abrir el archivo";
+		exit(1);
+	}
+	while (!leer.eof()){
+		getline(leer,texto);
+		cout<<texto<<endl;
+	}
+	leer.close();	
 }
 
 void Monitor::setReservar_fechayhoraespecial(){
+		ifstream leer;
+	ofstream temp;
+	string dia,hora,cod,codaux;
+
+	leer.open("fechasespeciales.txt");
+	temp.open("temporal.txt");
+	leer>>dia;
+	leer>>hora;
+	
+	if (leer.fail()){
+		cout<<"Error al abrir el archivo";
+		exit(1);
+	}
+	bool encontrado=false;
+	cout<<"Ingrese el codigo del dia escogido: ";
+	cin>>codaux;
+	
+	while (!leer.eof()){
+		leer>>cod;	
+		if(cod==codaux){
+			encontrado=true;
+			cout<<" dia: "<<dia;
+			cout<<" hora: "<<hora;
+			cout<<" codigo: "<<cod;
+			cout<<endl;
+			cout<<"reservado"<<endl;			
+		}
+		else{
+			temp<<dia<<" "<<hora<<" "<<cod<<endl;
+		}
+		leer>>dia;
+		leer>>hora;
+	}
+	if(encontrado=false){
+		cout<<"Dia no encontrado"<<endl;
+	}
+	leer.close();
+	temp.close();
+	
+	remove("fechasespeciales.txt");
+	rename("temporal.txt","fechasespeciales.txt");
 }
 
