@@ -13,6 +13,7 @@ class Cliente{
 	string fecha_nacimiento_;
 	string correo_electronico_;
 	string direccion_;
+	int problemasfisicos_=0;
 
 	public:
 	Cliente(string nombre = " ", string apellidos = " ", string DNI = 0, string fecha_nacimiento, string correo_electronico, string direccion)
@@ -32,12 +33,6 @@ class Cliente{
 	
 	
 	inline void setidentificacion_cliente(string nombre, string apellidos, string DNI, string fecha_nacimiento, string correo_electronico, string direccion);
-	int setseleccionarruta();
-	int setelegir_fechayhora();
-	inline void setdar_datos();
-	void contactar_monitor();
-	string pedir_datos_monitor();
-	void setconfirmar_reserva();
 	
 	
 	
