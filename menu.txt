@@ -7,7 +7,7 @@
                             PROGRAMADORES
                   -------------------------------------
                         Nemesio Romero Pino
-                        Alex Robira Domínguez
+                        Alex Rovira Domínguez
                         Miguel Molina Galán
                   -------------------------------------
 */
@@ -15,6 +15,7 @@
 #include<iostream
 #include<cmath>
 #include<string>
+using namespace std;
 
 	struct Cliente{			//datos de los clientes
 	string DNI;
