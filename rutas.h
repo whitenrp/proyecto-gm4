@@ -83,17 +83,11 @@ public:
 
 	}
 
-	void imprimeHorarios(){
+	void imprimefechayhora1(){
 
 		std::string temp;
 
 		std::ifstream file1("fechayhora1.txt");
-
-		std::ifstream file2("fechayhora2.txt");
-
-		std::ifstream file3("fechayhora3.txt");
-
-		std::ifstream file4("fechayhora4.txt");
 
 		if(!file1){
 
@@ -112,6 +106,14 @@ public:
 
 		}
 
+	}
+
+	void imprimefechayhora2(){
+
+		std::string temp;
+
+		std::ifstream file2("fechayhora2.txt");
+
 		if(!file2){
 
 			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
@@ -129,6 +131,14 @@ public:
 
 		}
 
+	}
+
+	void imprimefechayhora3(){
+
+		std::string temp;
+
+		std::ifstream file3("fechayhora3.txt");
+
 		if(!file3){
 
 			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
@@ -145,6 +155,14 @@ public:
 		file3.close();
 
 		}
+
+	}
+
+	void imprimefechayhora4(){
+
+		std::string temp;
+
+		std::ifstream file4("fechayhora4.txt");
 
 		if(!file4){
 
