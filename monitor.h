@@ -36,6 +36,7 @@ bool confirmar_monitor();
 string getDar_rutas();
 string getDar_fechayhoradisp();
 void Dar_rutas_especiales();
+void imprimirMonitores();
 void setReservar_fechayhora();
 
 
