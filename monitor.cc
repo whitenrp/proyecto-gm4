@@ -43,7 +43,22 @@ string Monitor::getDar_rutas(){
 	}
 	archivo.close();
 }
+
+void imprimirFicheromonitores(){
+	ifstream archivo,
+	archivo.open("monitores.txt");
+	string texto;
 	
+	if(archivo.fail()){ cout<<"\t Carga de fichero fallida."<<endl;}
+	else{
+		cout<<"\t Los monitores disponibles son:"<<endl;
+		while(!archivo.eof()){
+			getline(archivo,texto);
+			cout<<texto<<endl;	
+		}
+	}
+	archivo.close();	
+}
 	
 string Monitor::getDar_fechayhoradisp(){
 }
