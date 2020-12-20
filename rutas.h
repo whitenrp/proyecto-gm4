@@ -85,24 +85,81 @@ public:
 
 	void imprimeHorarios(){
 
-		std::ifstream file("fechayhora.txt");
+		std::string temp;
 
-		if(!file){
+		std::ifstream file1("fechayhora1.txt");
+
+		std::ifstream file2("fechayhora2.txt");
+
+		std::ifstream file3("fechayhora3.txt");
+
+		std::ifstream file4("fechayhora4.txt");
+
+		if(!file1){
 
 			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
 
 		}
 		else{
 
-		std::string temp;
-
-		while(getline(file, temp, '\n')){
+		while(getline(file1, temp, '\n')){
 
 			std::cout << temp << std::endl;
 
 		}
 
-		file.close();
+		file1.close();
+
+		}
+
+		if(!file2){
+
+			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
+
+		}
+		else{
+
+		while(getline(file2, temp, '\n')){
+
+			std::cout << temp << std::endl;
+
+		}
+
+		file2.close();
+
+		}
+
+		if(!file3){
+
+			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
+
+		}
+		else{
+
+		while(getline(file3, temp, '\n')){
+
+			std::cout << temp << std::endl;
+
+		}
+
+		file3.close();
+
+		}
+
+		if(!file4){
+
+			std::cout << "Error al abrir el fichero rutas.txt" << std::endl;
+
+		}
+		else{
+
+		while(getline(file4, temp, '\n')){
+
+			std::cout << temp << std::endl;
+
+		}
+
+		file4.close();
 
 		}
 
