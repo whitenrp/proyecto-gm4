@@ -30,7 +30,7 @@ int main(){
 	Cliente cliente1;
 	int opcion_menu;
 	cout<<endl;
-    cout<<"\t ____________________________________________________________"<<endl;   
+    	cout<<"\t ____________________________________________________________"<<endl;   
 	cout<<"\t|                                                            |"<<endl;
 	cout<<"\t|  Ha accedido al sistema de parques narutales de andalucía  |"<<endl;
 	cout<<"\t|____________________________________________________________|"<<endl;
@@ -48,7 +48,7 @@ int main(){
 	cin>>cliente1.fechanacimiento;
 	cout<<"\t|         Ingrese su correo electrónico:"<<endl;
 	cin>>cliente1.correoelectronicoc;
-	cout<<"\t|           Posée problemas físicos o de movilidad reducida?:"<<endl;
+	cout<<"\t|         Posée problemas físicos o de movilidad reducida?:"<<endl;
 	cout<<"\t|         1/Si           2/No"<<endl;
 	cin>>cliente1.problemasfisicos;
 	cout<<"\t|____________________________________________________________|"<<endl;
@@ -71,18 +71,23 @@ do
 		{
 			case 1:
 			{
-			if(rutasdisponibles>0){
-			mostrarrutas();
-			}
-			else
-			{
-			cout<<"No hay rutas disponibles en estos momentos, disculpe las molestias."<<endl;
-			}
-			}break; //fin mostrarrutas
+				mostrarrutas();
+			}break;
 			case 2:
 			{
-			realizarreserva();			
-			}break;//fin realizar reserva
+				verfechayhoradisp();			
+			}break;
+			case 3:
+			{
+				vermonitores();		
+			}break;
+			case 4:
+			{
+				realizarreserva();			
+			}break;
+			default:{
+			cout<<"\t Opción no válida, vuelva a introducirla."<<endl;	
+			}break;
 		}
 	}while(opcion_menu!=3);
 
