@@ -3,6 +3,8 @@
 #include <fstream>
 #include <stdlib.h>
 using namespace std;
+ifstream leer;
+ofstream temp;
 
 
 Monitor(string DNI, string nombre, string apellidos, int edad, string correoelectronico, string direccion)
