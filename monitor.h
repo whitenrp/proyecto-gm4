@@ -33,11 +33,9 @@ inline void setDar_datos_monitor(string nombre, string apellidos, string DNI, in
 inline string getDar_datos_monitor(){return nombre_, apellidos_, DNI_, edad_, correoelectronico_, direccion_;}
 
 bool confirmar_monitor();
-void setBuscar_rutas_disponibles();
 string getDar_rutas();
-void setBuscar_fechayhoradisp();
 string getDar_fechayhoradisp();
-void setBuscar_rutas_especiales();
+void Dar_rutas_especiales();
 void setReservar_fechayhora();
 
 
