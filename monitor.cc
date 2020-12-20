@@ -92,6 +92,7 @@ void Monitor::setReservar_fechayhora(){
 			temp<<dia<<" "<<hora<<" "<<cod<<endl;
 		}
 		leer>>dia;
+		leer>>hora;
 	}
 	if(encontrado=false){
 		cout<<"Dia no encontrado"<<endl;
@@ -99,7 +100,8 @@ void Monitor::setReservar_fechayhora(){
 	leer.close();
 	temp.close();
 	
-	rename("temporal.txt","fechayhora4.txt");
+	remove ("fechayhora.txt");
+	rename("temporal.txt","fechayhora.txt");
 }
 
 
