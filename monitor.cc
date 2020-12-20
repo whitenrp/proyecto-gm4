@@ -122,6 +122,18 @@ string Monitor::getDar_fechayhoraespecial(){
 	leer.close();	
 }
 
+void imprimirMonitores(){
+	std::ifstream file("monitores.txt");
+	if(!file){
+		std::cout << "Error al abrir el fichero monitores.txt" << std::endl;
+	}
+	std::string temp;
+	while(getline(file, temp, '\n')){
+		std::cout << temp << std::endl;
+	}
+	file.close();
+}
+
 void Monitor::setReservar_fechayhoraespecial(){
 		ifstream leer;
 	ofstream temp;
