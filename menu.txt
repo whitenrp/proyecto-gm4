@@ -1,7 +1,7 @@
 /*
  ___________________________________________________________________
 |                                                                   |
-| Proyecto Ingenieria del Software Universidad de Cordoba 2020/2021 | 
+| Proyecto Ingenieria del Software Universidad de Cordoba 2020/2021 |
 |___________________________________________________________________|
 
                             PROGRAMADORES
@@ -12,9 +12,13 @@
                   -------------------------------------
 */
 
-#include<iostream
+#include<iostream>
 #include<cmath>
 #include<string>
+#include "rutas.h"
+#include "monitor.h"
+#include "cliente.h"
+
 using namespace std;
 
 	struct Cliente{			//datos de los clientes
@@ -22,41 +26,44 @@ using namespace std;
 	string nombre;
 	string apellidos;
 	string fechanacimiento;
-	string correoelectronicoc;
-	int problemasfisicos;	//será usado para mostrar las rutas especiales o rutas normales a los clientes
+	string correoelectronico;
+	int problemasfisicos;	//este int=2 cuando el cliente no posee problemas físicos, cuando =1 posée y se mostrará las rutas especiales
 	};
 
 int main(){
 
+	Rutas R1;
+	Monitor M1;
+	
+	int opcion_menu=0;
 	struct Cliente cliente1;
-	int opcion_menu;
-	cout<<endl;
-    	cout<<"\t ____________________________________________________________"<<endl;   
+	cout<<""<<endl;
+    cout<<"\t ____________________________________________________________"<<endl;
 	cout<<"\t|                                                            |"<<endl;
-	cout<<"\t|  Ha accedido al sistema de parques narutales de andalucía  |"<<endl;
+	cout<<"\t|  Ha accedido al sistema de parques narutales de Andalucía  |"<<endl;
 	cout<<"\t|____________________________________________________________|"<<endl;
 	cout<<"\t|                                                            |"<<endl;
 	cout<<"\t|         Antes de continuar deberá identificarse            |"<<endl;
 	cout<<"\t|____________________________________________________________|"<<endl;
 	cout<<"\t|                                                            |"<<endl;
-	cout<<"\t|         Ingrese su nombre:"<<endl;
+	cout<<"\t|         Ingrese su nombre:";
 	cin>>cliente1.nombre;
-	cout<<"\t|         Ingrese sus apellidos separados con_:"<<endl;
+	cout<<"\t|         Ingrese sus apellidos separados con_:";
 	cin>>cliente1.apellidos;
-	cout<<"\t|         Ingrese su DNI:"<<endl;
+	cout<<"\t|         Ingrese su DNI:";
 	cin>>cliente1.DNI;
-	cout<<"\t|         Ingrese su fecha de nacimiento:"<<endl;
+	cout<<"\t|         Ingrese su fecha de nacimiento:";
 	cin>>cliente1.fechanacimiento;
-	cout<<"\t|         Ingrese su correo electrónico:"<<endl;
-	cin>>cliente1.correoelectronicoc;
+	cout<<"\t|         Ingrese su correo electrónico:";
+	cin>>cliente1.correoelectronico;
 	cout<<"\t|         Posée problemas físicos o de movilidad reducida?:"<<endl;
-	cout<<"\t|         1/Si           2/No"<<endl;
+	cout<<"\t|         1/Si           2/No\t\t";
 	cin>>cliente1.problemasfisicos;
 	cout<<"\t|____________________________________________________________|"<<endl;
 	
 do
 	{
-		cout<<"\t ____________________________________________________________"<<endl;
+	    cout<<"\t ____________________________________________________________"<<endl;
 		cout<<"\t|                                                            |"<<endl;
 		cout<<"\t|           Seleccione la opción deseada:                    |"<<endl;
 		cout<<"\t|           1. Ver rutas disponibles.                        |"<<endl;
@@ -67,35 +74,43 @@ do
 		cout<<"\t|____________________________________________________________|"<<endl;
 		
 		cin>>opcion_menu;
-		if(opcion_menu>2){cout<<"Opcion no valida para este programa, vuelva a seleccionar."<<endl;}
 		switch(opcion_menu)
 		{
 			case 1:
 			{
-				mostrarrutas();
-			}break;
+				cout<<"\t Las rutas disponibles son:"<<endl;
+				
+				if(cliente1.problemasfisicos==2){R1.imprimirFicherorutas();}//muestra las rutas para los clientes que no tienen problemas fisicos
+				else{R1.imprimeFicherorutasEspeciales();}
+			
+			}break; //fin mostrarrutas
 			case 2:
 			{
-				verfechayhoradisp();			
-			}break;
+				
+				M1.getDar_fechayhoradisp();
+						
+			}break;//fin realizar reserva
 			case 3:
 			{
-				vermonitores();		
+				
+				M1.imprimirMonitores(); abrir fichero de monitores y imprimir por pantalla
+						
 			}break;
 			case 4:
 			{
-				realizarreserva();			
+
+				Monitor::setReservar_fechayhora();
+						
+			}break;
+			case 5:
+			{
+				cout<<"\t Fin de programa..."<<endl;
+						
 			}break;
 			default:{
-			cout<<"\t Opción no válida, vuelva a introducirla."<<endl;	
+			cout<<"\t Opción no válida, vuelva a introducirla.\n"<<endl;	
 			}break;
 		}
-	}while(opcion_menu!=3);
+	}while(opcion_menu!=5);
 
-cin.ignore();
-cin.get();
 }//fin main
-
-
-
-
