@@ -111,9 +111,9 @@ int main(){
 
 	testConfirmar_monitor();
 	
-	std::cout << "Test 1 'testdar_fechayhoraespecial'" << std::endl;
+	std::cout << "Test 1 'testDar_fechayhoraespecial'" << std::endl;
 
-	testdar_fechayhoraespecial();
+	testDar_fechayhoraespecial();
 	
 	std::cout << "OK !!!" << std::endl;
 
