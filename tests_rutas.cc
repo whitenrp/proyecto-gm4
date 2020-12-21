@@ -95,6 +95,26 @@ int main(){
 
 	testimprimirFicherorutas();
 
+	std::cout << "Test 1 'testImprimirmonitores'" << std::endl;
+
+	testImprimirmonitores();
+	
+	std::cout << "Test 1 'testDar_fechayhoradisp'" << std::endl;
+
+	testDar_fechayhoradisp();
+	
+	std::cout << "Test 1 'testgestionareservas'" << std::endl;
+
+	testgestionareservas();
+	
+	std::cout << "Test 1 'testConfirmar_monitor'" << std::endl;
+
+	testConfirmar_monitor();
+	
+	std::cout << "Test 1 'testdar_fechayhoraespecial'" << std::endl;
+
+	testdar_fechayhoraespecial();
+	
 	std::cout << "OK !!!" << std::endl;
 
 	std::cout << "Test 2 'testimprimeFicherorutasEspeciales'" << std::endl;
