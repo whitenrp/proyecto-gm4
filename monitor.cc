@@ -85,7 +85,7 @@ void Monitor::reservar_fechayhora1(){
 		leer>>hora;
 	}
 	if(encontrado==false){
-		cout<<"Dia no encontrado"<<endl;
+		cout<<"Error, Dia no encontrado"<<endl;
 	}
 	leer.close();
 	temp.close();
