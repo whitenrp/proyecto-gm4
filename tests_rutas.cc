@@ -30,7 +30,26 @@ tests.cc
 
 	}
 
+void testImprimirmonitores(){
 
+        Monitor M1;
+
+        if(M1.imprimirMonitores() != true){
+
+            std::cout << "Error test imprimirMonitores()" << std::endl;
+
+        }
+}
+
+void testDar_fechayhoradisp(){
+
+        Monitor M1;
+
+        if(M1.dar_fechayhoradisp() != true){
+
+            std::cout << "Error test dar_fechayhoradisp()" << std::endl;
+}
+	
 	void testgestionareservas(){
 
 		Rutas R1;
@@ -68,3 +87,4 @@ int main(){
 	return 0;
 
 }
+
