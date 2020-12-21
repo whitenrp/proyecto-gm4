@@ -13,7 +13,6 @@ string DNI_;
 string correoelectronico_;
 string direccion_;
 
-
 public:
     Monitor(){
         string DNI_="";
