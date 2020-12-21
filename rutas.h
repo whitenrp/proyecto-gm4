@@ -39,7 +39,7 @@ public:
 
 	}
 
-	void imprimirFicherorutas(){
+	bool imprimirFicherorutas(){
 
 		std::ifstream file("rutas.txt");
 
@@ -59,9 +59,11 @@ public:
 
 		file.close();
 
+		return true;
+
 	}
 
-	void imprimeFicherorutasEspeciales(){
+	bool imprimeFicherorutasEspeciales(){
 
 		std::ifstream file("rutas_especiales.txt");
 
@@ -81,9 +83,11 @@ public:
 
 		file.close();
 
+		return true;
+
 	}
 
-	void imprimefechayhora1(){
+	bool imprimefechayhora1(){
 
 		std::string temp;
 
@@ -106,9 +110,11 @@ public:
 
 		}
 
+		return true;
+
 	}
 
-	void imprimefechayhora2(){
+	bool imprimefechayhora2(){
 
 		std::string temp;
 
@@ -131,9 +137,11 @@ public:
 
 		}
 
+		return true;
+
 	}
 
-	void imprimefechayhora3(){
+	bool imprimefechayhora3(){
 
 		std::string temp;
 
@@ -156,9 +164,11 @@ public:
 
 		}
 
+		return true;
+
 	}
 
-	void imprimefechayhora4(){
+	bool imprimefechayhora4(){
 
 		std::string temp;
 
@@ -181,9 +191,11 @@ public:
 
 		}
 
+		return true;
+
 	}
 
-	void gestionareservas(std::string info){
+	bool gestionareservas(std::string info){
 
 		std::ofstream file("reservas.txt");
 
@@ -197,6 +209,8 @@ public:
 			file << info;
 
 		}
+
+		return true;
 
 	}
 
