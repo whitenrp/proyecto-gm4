@@ -14,10 +14,11 @@
 
 #include<iostream>
 #include<cmath>
+#include<cstdlib>
 #include<string>
 #include "rutas.h"
 #include "monitor.h"
-#include "cliente.h"
+
 
 using namespace std;
 
@@ -26,17 +27,20 @@ using namespace std;
 	string nombre;
 	string apellidos;
 	string fechanacimiento;
+	string Direccion;
 	string correoelectronico;
-	int problemasfisicos;	//este int=2 cuando el cliente no posee problemas físicos, cuando =1 posée y se mostrará las rutas especiales
 	};
 
 int main(){
-
 	Rutas R1;
+	struct Cliente Cliente1;
 	Monitor M1;
+	string aux;
+	int codigoruta;
+	string codigohora;
+	int pf;
 	
 	int opcion_menu=0;
-	struct Cliente cliente1;
 	cout<<""<<endl;
     cout<<"\t ____________________________________________________________"<<endl;
 	cout<<"\t|                                                            |"<<endl;
@@ -47,18 +51,22 @@ int main(){
 	cout<<"\t|____________________________________________________________|"<<endl;
 	cout<<"\t|                                                            |"<<endl;
 	cout<<"\t|         Ingrese su nombre:";
-	cin>>cliente1.nombre;
+	cin>>Cliente1.nombre;
 	cout<<"\t|         Ingrese sus apellidos separados con_:";
-	cin>>cliente1.apellidos;
+	cin>>Cliente1.apellidos;
 	cout<<"\t|         Ingrese su DNI:";
-	cin>>cliente1.DNI;
+	cin>>Cliente1.DNI;
 	cout<<"\t|         Ingrese su fecha de nacimiento:";
-	cin>>cliente1.fechanacimiento;
+	cin>>Cliente1.fechanacimiento;
 	cout<<"\t|         Ingrese su correo electrónico:";
-	cin>>cliente1.correoelectronico;
+	cin>>Cliente1.correoelectronico;
+	cout<<"\t|		   Ingrese su Dirección: ";
+	cin>>Cliente1.Direccion;
 	cout<<"\t|         Posée problemas físicos o de movilidad reducida?:"<<endl;
 	cout<<"\t|         1/Si           2/No\t\t";
-	cin>>cliente1.problemasfisicos;
+	cin>>pf;
+	
+	
 	cout<<"\t|____________________________________________________________|"<<endl;
 	
 do
@@ -80,26 +88,38 @@ do
 			{
 				cout<<"\t Las rutas disponibles son:"<<endl;
 				
-				if(cliente1.problemasfisicos==2){R1.imprimirFicherorutas();}//muestra las rutas para los clientes que no tienen problemas fisicos
+				if(pf==2){R1.imprimirFicherorutas();}//muestra las rutas para los clientes que no tienen problemas fisicos
 				else{R1.imprimeFicherorutasEspeciales();}
 			
 			}break; //fin mostrarrutas
 			case 2:
 			{
-				
-				M1.getDar_fechayhoradisp();
+				if(pf==2){M1.dar_fechayhoradisp();}
+				else{M1.dar_fechayhoraespecial();}
 						
 			}break;//fin realizar reserva
 			case 3:
 			{
 				
-				M1.imprimirMonitores(); abrir fichero de monitores y imprimir por pantalla
+				M1.imprimirMonitores(); //abrir fichero de monitores y imprimir por pantalla
 						
 			}break;
 			case 4:
 			{
-
-				Monitor::setReservar_fechayhora();
+				cout<<"\t|           De  las rutas observadas, ¿Cual es su elección?"<<endl;
+				cout<<"\t|           "<<endl;
+				cin>>codigoruta;
+				if(pf==2){
+					if(codigoruta==1){M1.reservar_fechayhora1();}
+					if(codigoruta==2){M1.reservar_fechayhora2();}
+					if(codigoruta==3){M1.reservar_fechayhora3();}
+					if(codigoruta==4){M1.reservar_fechayhora4();}
+					if((codigoruta!=1)&&(codigoruta!=2)&&(codigoruta!=3)&&(codigoruta!=4)){
+					cout<<"\t|           Número incorrecto de ruta."<<endl;
+					cout<<"\t|           Sistema volviendo al menú...\n"<<endl;
+						}
+					}
+				else{M1.reservar_fechayhoraespecial();}
 						
 			}break;
 			case 5:
