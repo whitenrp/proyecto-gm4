@@ -5,7 +5,7 @@
 
 bool Monitor::confirmar_monitor(){
 	string respuesta;
-	cout<<"�Puedes asistir?";
+	cout<<"¿Puedes asistir?";
 	cin>>respuesta;
 	if (respuesta=="si"){
 		return true;
@@ -290,7 +290,7 @@ void Monitor::reservar_fechayhoraespecial(){
 		leer>>hora;
 	}
 	if(encontrado==false){
-		cout<<"Dia no encontrado"<<endl;
+		cout<<"Dia no encontrado, observe los días para volver a seleccionar"<<endl;
 	}
 	leer.close();
 	temp.close();
