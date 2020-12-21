@@ -37,12 +37,12 @@ public:
     inline string getDireccion(){return direccion_;}
 
     bool confirmar_monitor();
-    void getDar_rutas();
-    void getDar_fechayhoradisp();
-    void setReservar_fechayhora();
+    void dar_rutas();
+    void dar_fechayhoradisp();
+    void reservar_fechayhora();
     
-    void Dar_rutas_especiales();
-    void getDar_fechayhoraespecial();
-    void setReservar_fechayhoraespecial();
+    void dar_rutas_especiales();
+    void dar_fechayhoraespecial();
+    void reservar_fechayhoraespecial();
     void imprimirMonitores();
-}
+};
