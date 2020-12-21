@@ -21,7 +21,7 @@ void Monitor::dar_rutas(){
 	string texto;
 	
 	if (archivo.fail()){
-		cout<<"Carga de fichero fallida";
+		cout<<"Error, Carga de fichero fallida";
 		exit(1);
 	}
 	
