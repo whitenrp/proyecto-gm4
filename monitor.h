@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <stdlib.h>
+#include <stdlib>
 using namespace std;
 
 class Monitor{
