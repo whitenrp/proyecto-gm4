@@ -64,6 +64,31 @@ void testDar_fechayhoradisp(){
 
 	}
 
+void testConfirmar_monitor(){
+	
+	bool resultado=true;
+	
+	if (confirmar_monitor()==true){
+		cout<<	"OK";
+	}
+	else{
+		cout<<	"Error en confirmar_monitor(). "<<endl;
+}
+	
+}
+void testDar_fechayhoraespecial(){
+
+	Monitor M1;
+
+	if(M1.dar_fechayhoraespecial() != true){
+
+		std::cout << "Error test dar_fechayhoraespecial()" << std::endl;
+
+	}
+
+}
+	
+	
 int main(){
 
 	std::cout << "Test 1 'testimprimirFicherorutas'" << std::endl;
