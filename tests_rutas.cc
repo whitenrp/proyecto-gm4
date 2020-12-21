@@ -5,6 +5,7 @@ tests.cc
 #include <iostream>
 #include <string>
 #include "rutas.h"
+#include "monitor.h"
 
 	void testimprimirFicherorutas(){
 
