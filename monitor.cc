@@ -1,13 +1,7 @@
 #include "monitor.h"
+#include <string>
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
-#include <string>
-using namespace std;
-ifstream leer;
-istream archivo;
-ofstream temp;
-
 
 Monitor(string DNI, string nombre, string apellidos, int edad, string correoelectronico, string direccion)
 {
@@ -124,16 +118,19 @@ string Monitor::getDar_fechayhoraespecial(){
 	leer.close();	
 }
 
-void imprimirMonitores(){
-	std::ifstream file("monitores.txt");
-	if(!file){
-		std::cout << "Error al abrir el fichero monitores.txt" << std::endl;
+string Monitor::imprimirMonitores(){
+	ifstream leer;
+	string texto;
+	leer.open("monitores.txt");
+	if (leer.fail()){
+		cout<<"Error al abrir el archivo";
+		exit(1);
 	}
-	std::string temp;
-	while(getline(file, temp, '\n')){
-		std::cout << temp << std::endl;
+	while (!leer.eof()){
+		getline(leer,texto);
+		cout<<texto<<endl;
 	}
-	file.close();
+	leer.close();
 }
 
 void Monitor::setReservar_fechayhoraespecial(){
