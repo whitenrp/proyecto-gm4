@@ -25,7 +25,7 @@ bool Monitor::confirmar_monitor(){
 }
 
 
-string Monitor::getDar_rutas(){
+void Monitor::dar_rutas(){
 	ifstream archivo;
 	archivo.open("rutas.txt");
 	string texto;
@@ -43,7 +43,7 @@ string Monitor::getDar_rutas(){
 }
 	
 	
-string Monitor::getDar_fechayhoradisp(){
+void Monitor::dar_fechayhoradisp(){
 	ifstream leer;
 	string texto;
 	leer.open("fechayhora.txt");
@@ -58,7 +58,7 @@ string Monitor::getDar_fechayhoradisp(){
 	leer.close();
 }
 
-void Monitor::setReservar_fechayhora(){
+void Monitor::reservar_fechayhora(){
 	ifstream leer;
 	ofstream temp;
 	string dia,hora,cod,codaux;
@@ -92,7 +92,7 @@ void Monitor::setReservar_fechayhora(){
 		leer>>dia;
 		leer>>hora;
 	}
-	if(encontrado=false){
+	if(encontrado==false){
 		cout<<"Dia no encontrado"<<endl;
 	}
 	leer.close();
@@ -103,7 +103,7 @@ void Monitor::setReservar_fechayhora(){
 }
 
 
-string Monitor::getDar_fechayhoraespecial(){
+void Monitor::dar_fechayhoraespecial(){
 	ifstream leer;
 	string texto;
 	leer.open("fechasespeciales.txt");
@@ -118,7 +118,7 @@ string Monitor::getDar_fechayhoraespecial(){
 	leer.close();	
 }
 
-string Monitor::imprimirMonitores(){
+void Monitor::imprimirMonitores(){
 	ifstream leer;
 	string texto;
 	leer.open("monitores.txt");
@@ -133,7 +133,7 @@ string Monitor::imprimirMonitores(){
 	leer.close();
 }
 
-void Monitor::setReservar_fechayhoraespecial(){
+void Monitor::reservar_fechayhoraespecial(){
 		ifstream leer;
 	ofstream temp;
 	string dia,hora,cod,codaux;
@@ -167,7 +167,7 @@ void Monitor::setReservar_fechayhoraespecial(){
 		leer>>dia;
 		leer>>hora;
 	}
-	if(encontrado=false){
+	if(encontrado==false){
 		cout<<"Dia no encontrado"<<endl;
 	}
 	leer.close();
